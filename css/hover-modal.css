@@ -1,0 +1,74 @@
+/* hover modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+#modal-container {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.modal-overlay.display, #modal-container.display {
+    display: block;
+    opacity: .75;
+}
+.modal-contact {
+    background-color: #003459;
+    color: white;
+    position: fixed;
+    width: 40%;
+    height: auto;
+    left: 30%;
+    top: 20vh;
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    animation: slide-down 1s ease-in-out forwards;
+}
+.modal-title {
+    text-decoration: underline;
+    margin-bottom: .5em;
+}
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+   }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+   }
+}
+@media (max-width: 992px) {
+    .contact-bubbles {
+        width: 90%;
+   }
+    .contact-btn {
+        width: 30%;
+   }
+    .modal-contact {
+        width: 60%;
+        height: auto;
+        left: 20%;
+   }
+    .modal-title {
+        font-size: 1.3rem;
+   }
+    .modal-paragraph {
+        font-size: .9rem;
+   }
+}
+@media (max-width: 768px) {
+    .modal-contact {
+        width: 70%;
+        height: auto;
+        left: 15%;
+   }
+}
