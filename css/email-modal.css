@@ -292,9 +292,9 @@
     .form {
         grid-template-columns: 1fr;
         overflow-y: auto;
-        
+
     }
-    
+
 
 
 }
@@ -305,12 +305,12 @@
     }
 
     .modal-bg {
-        padding: 0;
+        padding: 2rem .5rem;
     }
 
     .form {
         grid-template-columns: 1fr;
-       
+
     }
 
     .email-contact-info:before {
@@ -351,16 +351,15 @@
     }
 }
 
-/* @media (max-width: 420px) {
-    .modal-container {
+@media (max-width: 400px) {
+
+    .form-text,
+    .information:nth-of-type(1),
+    .modal-social-media p {
+        display: none;
+    }
+
+    .modal-social-media {
         padding: 0;
-        margin: 0;
     }
-
-    .form,
-    .email-form {
-        overflow: hidden;
-    }
-
-
-} */
+}
