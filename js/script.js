@@ -20,6 +20,7 @@ function fadeOut(item) {
 }
 
 
+
 // page scroll event listener.. nav/social icons/progress bar reveal
 const progressbarinner = document.querySelector('.progress-bar-inner');
 const progressContainer = document.querySelector('.progress-container')
@@ -61,14 +62,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // bootstrap make list disapear if clicked offscreen in addition to hamburger button toggle
-window.onload = function() {
-    document.addEventListener("click", function(event) {
-      // if the clicked element isn't child of the navbar, you must close it if is open
-      if (!event.target.closest(".nav-style") && document.getElementById("navbarNav").classList.contains("show")) {
-        document.getElementById("burger-btn").click();
-      }
+window.onload = function () {
+    document.addEventListener("click", function (event) {
+        // if the clicked element isn't child of the navbar, you must close it if is open
+        if (!event.target.closest(".nav-style") && document.getElementById("navbarNav").classList.contains("show")) {
+            document.getElementById("burger-btn").click();
+        }
     });
-  }
+}
+
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarNav')
+const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false })
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+})
+
 
 // project section -- reveal info on button click
 
@@ -84,6 +93,7 @@ projectButton.forEach(button => {
         }
         projectInfo.forEach(info => {
             info.classList.toggle('project-info-appear')
+            info.scrollTop = 0;
         })
     })
 })
@@ -94,6 +104,7 @@ imageOverlay.forEach(overlay => {
     overlay.addEventListener('mouseleave', () => {
         projectInfo.forEach(info => {
             info.classList.remove('project-info-appear')
+            info.scrollTop = 0;
         })
         projectButton.forEach(button => {
             button.innerText = 'More Details'
@@ -128,7 +139,7 @@ for (let i = 0; i < bubbleContainer.length; i++) {
     });
 }
 
-//bring in modal and overlay
+//bring in  hover modal and overlay
 contactBubbles.forEach((contacts) => {
     contacts.addEventListener('mouseenter', function (e) {
         overlay.classList.add('display');
@@ -143,6 +154,7 @@ contactBubbles.forEach((contacts) => {
 })
 
 
+
 // email contact form reveal
 const emailForm = document.querySelector('.modal-bg');
 const contactButton = document.querySelector('.contact-btn');
@@ -150,11 +162,41 @@ const closeButton = document.querySelector('.close-btn');
 
 
 contactButton.addEventListener('click', function () {
-    emailForm.classList.remove('d-none');
+    // emailForm.classList.remove('d-none');
     nav.classList.add('d-none')
+    emailForm.style.width = "100vw";
+    emailForm.style.height = "100vh";
+    emailForm.style.opacity = 1;
+    document.body.style.overflow = 'hidden'
 })
 closeButton.addEventListener('click', function () {
-    emailForm.classList.add('d-none');
+    // emailForm.classList.add('d-none');
     nav.classList.remove('d-none')
+    emailForm.style.width = 0;
+    emailForm.style.height = 0;
+    emailForm.style.opacity = 0;
+    document.body.style.overflow = 'auto'
+})
+
+// email focus on inputs
+const emailInput = document.querySelectorAll('.contact-input');
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add('focus')
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+        parent.classList.remove('focus')
+    } else {
+        return;
+    }
+}
+
+emailInput.forEach(input => {
+    input.addEventListener('focus', focusFunc)
+    input.addEventListener('blur', blurFunc)
 })
 

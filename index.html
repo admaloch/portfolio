@@ -106,10 +106,14 @@
         <!-- social media icons -->
         <div class="social-buttons">
             <ul>
-                <li><a target="_blank" href="https://www.linkedin.com/feed/">Linked-In<i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/davis.maloch">facebook<i
+                            class="fa-brands fa-facebook-f"></i></a></li>
+
                 <li><a target="_blank" href="https://github.com/admaloch">Github<i class="fa-brands fa-github"></i></a>
                 </li>
-                <li><a target="_blank" href="https://www.youtube.com/channel/UCg_yLlKhfIXdid1imiEIwdA">Youtube<i class="fa-brands fa-youtube"></i></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCg_yLlKhfIXdid1imiEIwdA">Youtube<i
+                            class="fa-brands fa-youtube"></i></a></li>
+
             </ul>
         </div>
 
@@ -120,7 +124,7 @@
                 <div class="about-container">
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="col-sm-6 text-center ">
-                            <img class="img-fluid portrait-style" src="./img/portrait.jpg" alt="russel crowe photo">
+                            <img class="img-fluid portrait-style" src="./img/portrait.jpg" alt="portrait photo">
                         </div>
                         <div class="col-sm-6 text-center d-flex justify-content-center align-items-center">
                             <p class="bio-container">Hello, my name is Davis Maloch and I am a self taught developer
@@ -495,64 +499,76 @@
         </section>
 
         <!-- email modal -->
-        <div class="modal-bg d-none">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="wrapper img img-fluid" style="background-image: url(./img/email-photo.jpg)">
-                        <div class="row">
-                            <div class="col-md-9 col-lg-7">
-                                <div class="contact-wrap w-100 p-md-5 p-4">
-                                    <h3 class="mb-4">Please get in touch</h3>
-                                    <div id="form-message-warning" class="mb-4"></div>
-                                    <div id="form-message-success" class="mb-4">
-                                        Your message was sent, thank you!</div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="label" for="name">Full Name</label>
-                                                    <input type="text" class="form-control" name="name" id="name"
-                                                        placeholder="Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label class="label" for="email">Email Address</label>
-                                                    <input type="email" class="form-control" name="email" id="email"
-                                                        placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="label" for="subject">Subject</label>
-                                                    <input type="text" class="form-control" name="subject" id="subject"
-                                                        placeholder="Subject">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="label" for="#">Message</label>
-                                                    <textarea name="message" class="form-control" id="message" cols="30"
-                                                        rows="4" placeholder="Message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-3">
-                                                <div class="form-group">
-                                                    <input type="submit" value="Send Email" class="btn email-btn">
-                                                    <div class="submitting"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-9">
-                                                <button type="button" class="btn email-btn close-btn">Close</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+        <div class="modal-bg ">
 
-                            </div>
+            <div class="form">
+                <div class="email-contact-info closediv">
+                    <h3 class="form-title">Let's get in touch</h3>
+                    <p class="form-text">Feel free to contact anytime and I'll get back as soon as I can.
+                    </p>
+                    <div class="info">
+                        <div class="information">
+                            <img src="./img/location.png" alt="location icon" class="info-icon">
+                            <p>2775 Gerald Dr. Tallahasee Fl. 32310</p>
+                        </div>
+                        <div class="information">
+                            <img src="./img/email.png" alt="email icon" class="info-icon">
+                            <p>Admaloch91@gmail.com</p>
+                        </div>
+                        <div class="information">
+                            <img src="./img/phone.png" alt="phone icon" class="info-icon">
+                            <p>678-687-8222</p>
+                        </div>
+                    </div>
+                    <div class="modal-social-media">
+                        <p>Get Connected</p>
+                        <div class="modal-icon">
+                            <a href="https://www.facebook.com/davis.maloch" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://github.com/admaloch" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCg_yLlKhfIXdid1imiEIwdA" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+                <div class="email-contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+                    <form class="email-form" action="index.htmle">
+                        <h3 class="email-title">Send me a message</h3>
+                        <div class="input-container ">
+                            <input type="text" name="name" class="contact-input">
+                            <label for="">Name</label>
+                            <span>Name</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" name="email" class="contact-input">
+                            <label for="">Email</label>
+                            <span>Email</span>
+                        </div>
+                        <div class="input-container">
+                            <input type="tel" name="phone" class="contact-input">
+                            <label for="">Phone #</label>
+                            <span>Phone</span>
+                        </div>
+                        <div class="input-container textarea ">
+                            <textarea name="message" class="contact-input"></textarea>
+                            <label for="">Message:</label>
+                            <span>Message</span>
+                        </div>
+                        <div class="btn-container">
+                            <input type="submit" value="Send" class="email-btn " />
+                            <button type="button" class="email-btn close-btn">Cancel</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
             </div>
         </div>
 

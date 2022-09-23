@@ -63,12 +63,10 @@
 .social-buttons ul li:hover .fa-youtube {
     background: #06d6a0;
 }
-.social-buttons ul li:hover .fa-facebook {
+.social-buttons ul li:hover .fa-facebook-f {
     background: #118ab2;
 }
-.social-buttons ul li:hover .fa-google-plus {
-    background: #073b4c;
-}
+
 @media (max-width: 768px) {
     .social-buttons {
         display: none;
