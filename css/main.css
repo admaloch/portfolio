@@ -178,7 +178,7 @@ html {
     .main-btn {
         margin-top: 3rem;
         transition: .5s;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         letter-spacing: 5px;
         padding: 7px 30px;
     }
@@ -219,7 +219,7 @@ html {
 
     .main-btn {
         margin-top: 3rem;
-        font-size: .8rem;
+        font-size: 1rem;
         letter-spacing: 5px;
         padding: 4px 20px;
     }
@@ -273,7 +273,7 @@ html {
 
     .main-btn {
         margin-top: 3rem;
-        font-size: .7rem;
+        font-size: 1rem;
         letter-spacing: 5px;
         padding: 3px 15px;
     }
