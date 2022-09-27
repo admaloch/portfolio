@@ -282,10 +282,11 @@ html {
         width: 90%;
     }
 
-   
+   .footer-container ul {
+    display: none;
+   }
 
-    .footer-container p,
-    .footer-container ul {
+    .footer-container p {
         margin-bottom: 0;
 
     }

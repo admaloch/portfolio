@@ -12,7 +12,7 @@
     z-index: 155;
     transition: all 500ms ease-in-out;
     padding: 2rem;
-    border: green solid 2px;
+    overflow-x: hidden;
 
 }
 
@@ -147,6 +147,7 @@
     cursor: pointer;
     transition: .3s;
     margin: 0 .3rem;
+    color: black;
 }
 
 .email-btn:hover {
@@ -300,9 +301,7 @@
 }
 
 @media (max-width: 500px) {
-    .modal-container {
-        padding: 1.5rem;
-    }
+    
 
     .modal-bg {
         padding: 2rem .5rem;
@@ -351,7 +350,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
     .form-text,
     .information:nth-of-type(1),
@@ -362,4 +361,9 @@
     .modal-social-media {
         padding: 0;
     }
+
+    .modal-bg {
+        padding: 3rem .5rem;
+    }
+    
 }
