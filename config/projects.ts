@@ -29,564 +29,516 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
-    id: "portfolio-template",
-    companyName: "Portfolio Website (130+ GitHub stars)",
+    id: "chatvector-ai",
+    companyName: "ChatVector-AI",
     type: "Personal",
-    category: ["Web Dev", "Frontend", "UI/UX"],
+    category: ["Backend", "Full Stack"],
     shortDescription:
-      "Open-source Next.js portfolio template recognized and forked by developers worldwide, optimized for SEO/AEO and performance.",
-    websiteLink: "https://nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/minimal-next-portfolio",
+      "Open-source backend-first RAG engine for document intelligence and semantic search with vector embeddings",
+    githubLink: "https://github.com/chatvector-ai/chatvector-ai",
     techStack: [
-      "Next.js",
-      "React",
-      "Typescript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Vercel",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Supabase",
     ],
     startDate: new Date("2024-01-01"),
-    endDate: new Date("2025-12-01"),
-    companyLogoImg: "/projects/portfolio/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Landing & Sections",
-        description:
-          "A clean, minimal landing page with sections for skills, projects, contributions, and experience.",
-        imgArr: ["/profile-img.jpg"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "I created an open-source Next.js portfolio template to help developers ship a modern, responsive portfolio quickly.",
-        "The project focuses heavily on performance, clean typography, and strong SEO/AEO foundations, and it has been adopted and forked by developers globally.",
-      ],
-      bullets: [
-        "Created an open-source Next.js portfolio template recognized and forked by developers worldwide.",
-        "Ranked #1 on ChatGPT search for “best Next.js portfolio template GitHub” through AEO/GEO optimization.",
-        "Maintained a fast, responsive UI with a minimal, themeable design system.",
-      ],
-    },
-  },
-  {
-    id: "convot",
-    companyName: "Convot",
-    type: "Personal",
-    category: ["Full Stack", "Backend", "Web Dev"],
-    shortDescription:
-      "Production-ready AI chatbot platform that crawls, indexes, and embeds knowledge from PDFs/URLs/text to deliver source-grounded answers via a one-line widget.",
-    techStack: ["Next.js", "React", "Node.js", "Typescript", "Python"],
-    startDate: new Date("2024-04-01"),
-    endDate: new Date("2024-10-01"),
-    companyLogoImg: "/projects/convot/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Ingestion & Retrieval",
-        description:
-          "Designed ingestion and retrieval pipelines supporting multiple content sources with secure tenant isolation.",
-        imgArr: ["/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "Convot is a production-ready AI chatbot platform designed to be embedded on any website with a single line widget.",
-        "It supports crawling and indexing knowledge from PDFs, URLs, and plain text, and it returns context-aware, source-grounded answers with integrated analytics.",
-      ],
-      bullets: [
-        "Built a production-ready AI chatbot platform with integrated analytics and a one-line embed widget.",
-        "Designed ingestion and retrieval pipelines to support multiple sources (PDFs, URLs, text) with tenant isolation.",
-        "Focused on reliability, security, and traceable answers by grounding responses in retrieved sources.",
-      ],
-    },
-  },
-  {
-    id: "niya-saas-template",
-    companyName: "Niya SaaS Template (30+ GitHub stars)",
-    type: "Personal",
-    category: ["Full Stack", "Web Dev", "UI/UX"],
-    shortDescription:
-      "Production-ready Next.js 15 template for developers and AI startups. Includes authentication, state management, beautiful UI components, and everything needed to build scalable SaaS applications.",
-    websiteLink: "https://niya.nbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/niya-saas-template",
-    techStack: ["Next.js", "React", "Typescript", "Supabase", "Tailwind CSS"],
-    startDate: new Date("2024-08-01"),
     endDate: new Date("2025-01-01"),
-    companyLogoImg: "/projects/niya/logo.png",
+    companyLogoImg: "/projects/chatvector1.webp",
     pagesInfoArr: [
       {
-        title: "Landing Page",
+        title: "RAG Engine Architecture",
         description:
-          "Modern landing page showcasing the template features, tech stack, and pricing options.",
-        imgArr: ["/logo.png"],
-      },
-      {
-        title: "Authentication System",
-        description:
-          "Complete authentication system with Supabase, protected routes, and role-based access control.",
-        imgArr: ["/logo.png"],
-      },
-      {
-        title: "Dashboard & Components",
-        description:
-          "Beautiful UI components with Magic UI, Radix primitives, and comprehensive dashboard templates.",
-        imgArr: ["/logo.png"],
+          "Backend-first RAG engine with document ingestion, vector embeddings, and semantic retrieval",
+        imgArr: ["/projects/chatvector2.webp"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Niya is a production-ready Next.js 15 template designed for developers and AI startups. Built with modern best practices, it includes everything needed to build scalable SaaS applications.",
-        "The template features a complete authentication system with Supabase, beautiful UI components with Magic UI and Radix primitives, state management with Zustand and React Query, and full TypeScript support with Zod validation.",
-        "It's optimized for performance, includes SEO-friendly metadata, and provides a solid foundation for rapid prototyping and production deployment.",
+        "ChatVector-AI is an open-source Retrieval-Augmented Generation (RAG) engine for ingesting, indexing, and querying unstructured documents such as PDFs and text files. Think of it as an engine developers can use to build document-aware applications — such as research assistants, contract analysis tools, or internal knowledge systems — without having to reinvent the RAG pipeline.",
+        "ChatVector-AI provides a clean, extensible backend foundation for RAG-based document intelligence. It handles the full lifecycle of document Q&A: document ingestion (PDF, text), text extraction and chunking, vector embedding and storage, semantic retrieval, and LLM-powered answer generation.",
+        "The goal is to offer a developer-focused RAG engine that can be embedded into other applications, tools, or products — not a polished end-user SaaS. It's designed as a production-ready backend engine with batteries-included architecture, providing a fully functional FastAPI service with logging, testing, and a clean API.",
       ],
       bullets: [
-        "Created a production-ready Next.js 15 template with complete authentication system and protected routes.",
-        "Integrated Supabase for database, authentication, and real-time features with full TypeScript support.",
-        "Built comprehensive UI component library with Magic UI, Radix primitives, and Tailwind CSS styling.",
-        "Implemented state management with Zustand for client state and React Query for server state management.",
-        "Designed for developers and AI startups with all essential features to start building SaaS products.",
-        "Achieved 30+ GitHub stars and recognition as a comprehensive starter template for modern web applications.",
+        "Built production-ready FastAPI backend with Uvicorn ASGI server for high performance",
+        "Implemented full document lifecycle: PDF extraction, chunking, vector embeddings, and semantic search",
+        "Integrated Supabase PostgreSQL with pgvector for native vector similarity search",
+        "Leveraged Google AI Studio (Gemini) for LLM-powered answer generation and embeddings",
+        "Designed clean, extensible architecture focused on clarity, debuggability, and production deployment",
+        "Provided complete RAG pipeline as an embeddable engine for document intelligence applications",
+        "Created developer-focused solution with automatic OpenAPI docs and observability patterns",
+        "Open-sourced for developers building research assistants, contract analysis tools, and knowledge systems",
       ],
     },
   },
   {
-    id: "portfolio-card",
-    companyName: "Portfolio Card",
-    type: "Personal",
-    category: ["Web Dev", "Frontend", "3D Modeling"],
-    shortDescription:
-      "Forged an immersive 3D Portfolio Card utilizing the prowess of Three.js and Blender, where art and technology converge in an interactive masterpiece.",
-    websiteLink: "https://card.namanbarkiya.xyz/",
-    githubLink: "https://github.com/namanbarkiya/3d-portfolio-card",
-    techStack: ["React", "Javascript", "HTML 5", "CSS 3"],
-    startDate: new Date("2022-03-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/card/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Card Views",
-        description: "Front and back views of the interactive 3D card",
-        imgArr: ["/projects/card/card_2.webp", "/projects/card/card_3.webp"],
-      },
-      {
-        title: "Interactive Elements",
-        description:
-          "Custom links embedded in the 3D model with interactive animations",
-        imgArr: ["/projects/card/card_1.webp"],
-      },
-      {
-        title: "3D Model Development",
-        description: "Blender project showcasing the model creation process",
-        imgArr: ["/projects/card/card_4.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "In my personal, I've ventured into the world of creativity, fashioning a distinctive portfolio card through the utilization of Three.js.",
-        "This portfolio card transcends convention; it emerges as a captivating 3D model, adorned with meticulous lighting arrangements that conjure a spellbinding visual journey.",
-        "To materialize this concept, I've harnessed the combined potential of Three.js and Blender, orchestrating a meticulous crafting of the central 3D model that serves as the cornerstone of the card's allure.",
-        "Yet, the allure extends beyond aesthetics. I've ingeniously interwoven custom links directly into the fabric of Three.js components. Through the creation and seamless integration of novel components, these additions elegantly rest upon the card's surface, mirroring its rotations and delivering an interactive dimension to my portfolio.",
-        "The portfolio card itself is an opus of motion, perpetually swaying in an auto-rotational dance that unfurls its multifaceted essence. As an enhancement, I've introduced an instinctive user interaction element. A simple, intuitive drag of the card in specific directions grants viewers a comprehensive vantage, enabling exploration from every conceivable angle.",
-        "At its core, my personal epitomizes technical finesse, artistic expression, and interactive design. The amalgamation of Three.js, Blender's prowess, and the innovation of component integration has birthed not only a portfolio card, but a dynamic encounter leaving an indelible imprint on all who partake.",
-      ],
-      bullets: [
-        "Conceptualized and realized a distinct portfolio card using Three.js, highlighting creative exploration.",
-        "Crafted a mesmerizing 3D model enhanced by thoughtful lighting arrangements, resulting in a captivating visual voyage.",
-        "Leveraged the synergy of Three.js and Blender to meticulously sculpt and refine the central 3D model, embodying meticulous attention to detail.",
-        "Innovatively integrated custom links within Three.js components, introducing an interactive layer via seamlessly incorporated new elements.",
-        "Enabled an auto-rotating feature for the portfolio card, perpetually showcasing its various facets to observers.",
-        "Introduced an instinctual user interaction mechanism, allowing viewers to comprehensively explore the card's dimensions through simple, intuitive dragging motions.",
-        "Represented a fusion of technical prowess, artistic ingenuity, and interactive design in a project that reshapes the boundaries of conventional portfolio representation.",
-      ],
-    },
-  },
-  {
-    id: "the-super-focus",
-    companyName: "TheSuperFocus",
-    type: "Personal",
-    category: ["Full Stack", "Web Dev", "UI/UX"],
-    shortDescription:
-      "Pomodoro-inspired productivity web app with real-time sessions and recurring payments.",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Socket.io",
-      "Typescript",
-      "MongoDB",
-    ],
-    startDate: new Date("2023-06-01"),
-    endDate: new Date("2023-12-01"),
-    companyLogoImg: "/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Realtime Focus Sessions",
-        description:
-          "Built real-time focus sessions using sockets to help people stay accountable and productive.",
-        imgArr: ["/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "TheSuperFocus is a productivity web app inspired by the Pomodoro technique, built to help users stay focused and complete deep-work sessions.",
-        "It includes real-time session support and a paid tier with recurring billing.",
-      ],
-      bullets: [
-        "Built a Pomodoro-inspired productivity web app using real-time sockets.",
-        "Integrated Razorpay for recurring payments, securing 10+ premium users.",
-      ],
-    },
-  },
-  {
-    id: "built-design",
-    companyName: "Builtdesign",
+    id: "flourish-accessibility",
+    companyName: "Flourish Accessibility Menu",
     type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Developed and optimized a high-performing website catering to over 4000 users, emphasizing efficiency and maintainability.",
-    websiteLink: "https://builtdesign.in",
-    techStack: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "GraphQL",
-      "Nest.js",
-      "Typescript",
-    ],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Landing Page",
-        description:
-          "Modern and responsive landing page showcasing company services and portfolio",
-        imgArr: [
-          "/projects/builtdesign/landing_1.webp",
-          "/projects/builtdesign/landing_3.webp",
-          "/projects/builtdesign/landing_5.webp",
-          "/projects/builtdesign/landing_6.webp",
-          "/projects/builtdesign/landing_2.webp",
-          "/projects/builtdesign/landing_4.webp",
-        ],
-      },
-      {
-        title: "Custom PDF Reader and optimizer",
-        description:
-          "Specialized PDF viewer with optimization features for improved performance and user experience",
-        imgArr: ["/projects/builtdesign/pdf_opt.webp"],
-      },
-      {
-        title: "Clients Dashboard",
-        description:
-          "Comprehensive client portal with project tracking, document management, and communication tools",
-        imgArr: [
-          "/projects/builtdesign/cli_dashboard_1.webp",
-          "/projects/builtdesign/cli_dashboard_2.webp",
-          "/projects/builtdesign/cli_dashboard_3.webp",
-        ],
-      },
-      {
-        title: "Admin Dashboard",
-        description:
-          "Powerful administrative interface for managing users, projects, and system settings",
-        imgArr: ["/projects/builtdesign/logo.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "During my time at Builtdesign, I had the opportunity to work on a dynamic and user-focused project that involved designing and optimizing a website catering to a user base of over 4000 individuals. My role as a full-stack web developer was to ensure a seamless experience for users by creating an efficient and maintainable platform.",
-        "I collaborated closely with the product team to integrate cutting-edge features, employing technologies like Next.js and React with TypeScript for captivating front-end experiences. Additionally, I contributed significantly to the backend by utilizing Node.js, MongoDB, and GraphQL to design robust APIs and ensure smooth system functionality.",
-        "This experience allowed me to enhance my skills in various areas of web development and deliver a high-quality product. I gained proficiency in front-end technologies such as Material UI and Tailwind CSS, as well as backend technologies including Nest.js and MySQL. The project's success in catering to a large user base and providing an intuitive user interface has further motivated me to pursue excellence in web development.",
-      ],
-      bullets: [
-        "Developed and optimized a high-performing website catering to over 4000 users.",
-        "Collaborated closely with the product team to implement cutting-edge features.",
-        "Created an intuitive admin dashboard to efficiently manage and announce contest winners.",
-        "Leveraged Next.js, React with TypeScript for captivating front-end experiences.",
-        "Utilized Node.js, MongoDB, and GraphQL to design and manage databases.",
-      ],
-    },
-  },
-  {
-    id: "the-super-quotes",
-    companyName: "The Super Quotes",
-    type: "Professional",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Elevated The Super Quotes app with JavaScript, React Native, APIs, Redux magic, and Google Play Store debut.",
-    websiteLink:
-      "https://play.google.com/store/apps/details?id=com.thesuperlife",
-    techStack: ["React Native", "Node.js", "MongoDB", "Javascript"],
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/superquotes/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Quotes View Page",
-        description:
-          "Elegantly designed quotes display with customizable themes and sharing options",
-        imgArr: ["/projects/superquotes/app_2.webp"],
-      },
-      {
-        title: "Quotes Download Component",
-        description:
-          "Feature allowing users to download quotes as beautiful images for social media sharing",
-        imgArr: [
-          "/projects/superquotes/app_4.webp",
-          "/projects/superquotes/app_7.webp",
-        ],
-      },
-      {
-        title: "Account Management",
-        description:
-          "User profile management with favorites, history, and personalization settings",
-        imgArr: ["/projects/superquotes/app_6.webp"],
-      },
-      {
-        title: "Interest Selection and Update Page",
-        description:
-          "Interactive interface for users to select and update their quote preferences and interests",
-        imgArr: [
-          "/projects/superquotes/app_1.webp",
-          "/projects/superquotes/app_3.webp",
-        ],
-      },
-      {
-        title: "Responsiveness",
-        description:
-          "Adaptive design ensuring optimal user experience across various device sizes and orientations",
-        imgArr: ["/projects/superquotes/app_5.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        `Venturing into the world of creativity at The Super Quotes was an exhilarating journey. As a passionate developer, I led the charge in crafting a compelling application from inception to completion, using the dynamic duo of JavaScript and React Native.`,
-        `The heart of my achievement lay in the seamless integration of APIs, threading a tapestry of data flow that propelled the application's functionality to new heights.`,
-        `With the wizardry of Redux, I choreographed a symphony of state management and performance optimization, orchestrating a ballet of responsiveness that wowed users with every interaction.`,
-        `A crescendo awaited as I unveiled the culmination of my work on the grand stage of the Google Play Store. The app's debut marked an epoch, opening doors to an expansive audience eager to embrace the charm of The Super Quotes.`,
-      ],
-      bullets: [
-        "Led the end-to-end development of a captivating application using JavaScript and React Native.",
-        "Championed the integration of APIs, harmonizing data flow and enhancing application functionality.",
-        "Conducted Redux magic to ensure state management and optimize performance, delivering a mesmerizing user experience.",
-        "Premiered the application on the Google Play Store, capturing hearts and expanding its user base.",
-      ],
-    },
-  },
-  {
-    id: "apex-shopping",
-    companyName: "Apex Shopping App",
-    type: "Personal",
-    category: ["Mobile Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
-    githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
-    techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
-    startDate: new Date("2021-07-14"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/apex/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Splash Screen",
-        description: "Custom animated splash screen with app branding",
-        imgArr: ["/projects/apex/app_7.webp"],
-      },
-      {
-        title: "Login/Signup Authentication",
-        description: "Secure user authentication system with Firebase",
-        imgArr: ["/projects/apex/app_1.webp"],
-      },
-      {
-        title: "All Products Explore Screen",
-        description: "Interactive product browsing with categories and filters",
-        imgArr: ["/projects/apex/app_3.webp"],
-      },
-      {
-        title: "Admin Panel",
-        description:
-          "Comprehensive admin dashboard for product and order management",
-        imgArr: ["/projects/apex/app_4.webp", "/projects/apex/app_6.webp"],
-      },
-      {
-        title: "Sidenav Navigation",
-        description: "Intuitive side navigation for easy app navigation",
-        imgArr: ["/projects/apex/app_5.webp"],
-      },
-      {
-        title: "Firebase Database",
-        description:
-          "Real-time database structure for efficient data management",
-        imgArr: ["/projects/apex/db.webp"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "The Apex Shopping App represents a comprehensive mobile e-commerce solution that I developed from the ground up using React Native and Firebase. This project showcases my ability to create a full-featured shopping application with both user and admin functionalities.",
-        "The application features a robust authentication system, allowing users to securely sign up and log in. The product exploration interface is designed with user experience in mind, incorporating smooth navigation and intuitive filtering options.",
-        "One of the key highlights is the admin panel, which provides complete control over product management, order processing, and inventory tracking. The integration with Firebase ensures real-time data synchronization and reliable data persistence.",
-        "The app's architecture emphasizes scalability and performance, utilizing Redux for state management and following best practices for mobile app development. The UI/UX design focuses on providing a seamless shopping experience across different device sizes.",
-      ],
-      bullets: [
-        "Implemented secure user authentication and authorization using Firebase",
-        "Designed and developed an intuitive product browsing and shopping cart system",
-        "Created a comprehensive admin panel for product and order management",
-        "Integrated real-time data synchronization using Firebase Database",
-        "Implemented state management using Redux for optimal performance",
-        "Designed responsive UI components following mobile-first principles",
-        "Incorporated smooth animations and transitions for enhanced user experience",
-      ],
-    },
-  },
-  {
-    id: "builtdesign-blogs",
-    companyName: "Builtdesign Blogs",
-    type: "Professional",
-    category: ["Web Dev", "Full Stack", "UI/UX"],
-    shortDescription:
-      "Crafted Builtdesign's vibrant Blogs Website using Netlify CMS and React for engaging content experiences.",
-    websiteLink: "https://blog.builtdesign.in",
-    techStack: ["Next.js", "React", "Node.js", "MongoDB", "Typescript"],
-    startDate: new Date("2022-03-01"),
-    endDate: new Date("2022-07-01"),
-    companyLogoImg: "/projects/builtdesign-blogs/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Blog Landing Page",
-        description:
-          "Modern and responsive landing page showcasing featured articles",
-        imgArr: ["/projects/builtdesign-blogs/blog_2.webp"],
-      },
-      {
-        title: "Blog Listing",
-        description:
-          "Organized display of all blog posts with search and filtering",
-        imgArr: ["/projects/builtdesign-blogs/blog_3.webp"],
-      },
-      {
-        title: "Category Navigation",
-        description: "Intuitive category-based navigation system",
-        imgArr: ["/projects/builtdesign-blogs/blog_1.webp"],
-      },
-      {
-        title: "Article View",
-        description:
-          "Clean and readable article layout with rich media support",
-        imgArr: [
-          "/projects/builtdesign-blogs/blog_4.webp",
-          "/projects/builtdesign-blogs/blog_5.webp",
-        ],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "As part of the Builtdesign platform, I developed a sophisticated blog website that serves as a content hub for the company's thought leadership and industry insights. The project leveraged Next.js and React to create a fast, SEO-friendly platform.",
-        "The blog platform features a modern, responsive design that prioritizes readability and user engagement. I implemented a robust content management system using Netlify CMS, enabling the content team to easily publish and manage blog posts.",
-        "The architecture includes server-side rendering for optimal performance and SEO, while MongoDB provides flexible content storage. TypeScript ensures code reliability and maintainability throughout the application.",
-        "Key features include category-based navigation, search functionality, and a rich text editor for content creation. The platform supports various content types including images, code snippets, and embedded media.",
-      ],
-      bullets: [
-        "Developed a modern blog platform using Next.js and React with TypeScript",
-        "Implemented Netlify CMS for efficient content management",
-        "Created a responsive design that prioritizes readability and user engagement",
-        "Built server-side rendering for optimal performance and SEO",
-        "Integrated MongoDB for flexible content storage and management",
-        "Developed category-based navigation and search functionality",
-        "Implemented rich text editing capabilities for content creation",
-      ],
-    },
-  },
-
-  {
-    id: "cirql-dashboard",
-    companyName: "Cirql Dashboard",
-    type: "Personal",
     category: ["Web Dev", "Frontend", "UI/UX"],
     shortDescription:
-      "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
-    websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
-    techStack: ["React", "Tailwind CSS", "Google Auth"],
+      "Fully featured accessibility menu created for the Florida Memory website and may be released as open-source",
+    websiteLink: "https://flourish-accessibility-menu.netlify.app/",
+    githubLink: "https://github.com/admaloch-dos/flourish-accessibility-menu",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+      "Bootstrap",
+    ],
     startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-02-15"),
-    companyLogoImg: "/projects/cirql/logo.png",
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/flourish.webp",
     pagesInfoArr: [
       {
-        title: "Dashboard Home",
+        title: "Accessibility Menu",
         description:
-          "Main dashboard view with analytics widgets and data visualization",
-        imgArr: ["/projects/cirql/web_1.png", "/projects/cirql/web_2.png"],
-      },
-      {
-        title: "Profile Page",
-        description:
-          "User profile management interface with customization options",
-        imgArr: ["/projects/cirql/web_3.png", "/projects/cirql/web_4.png"],
+          "Comprehensive accessibility toolkit with text-to-speech, translation, and customization options",
+        imgArr: ["/projects/flourish.webp"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "For the 'Cirql Dashboard' personal, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
-        "I utilized React and Tailwind CSS to craft an intuitive dashboard interface that provides users with an organized overview of data and functionalities. The UI components were thoughtfully designed to ensure a seamless user experience.",
-        "Incorporating Google Sign-In Authentication further fortified the project by adding a layer of security and convenience. Users are required to authenticate before accessing certain routes, ensuring the safety of sensitive information.",
-        "The routing system was meticulously implemented to enable smooth navigation between different sections of the dashboard, simulating real-world use cases.",
-        "Through this project, I've gained valuable insights into UI/UX design principles and the implementation of secure and efficient routing in React applications.",
+        "This collaborative effort between my predecessor and I was the biggest project I've worked on to date and it aims to enhance the user experience for individuals facing disabilities that impede their access to our site's content.",
+        "The menu boasts customizable options, allowing users to control how page content is presented. It also incorporates a suite of tools to facilitate more effective content access.",
       ],
       bullets: [
-        "Created a user-friendly dashboard project using React and Tailwind CSS.",
-        "Implemented Google Sign-In Authentication to ensure secure access to sensitive routes.",
-        "Designed UI components to provide an intuitive and visually pleasing experience.",
-        "Focused on implementing a smooth routing system to simulate real-world use cases.",
-        "Enhanced my skills in UI design, routing, and component architecture.",
+        "Developed comprehensive accessibility menu for Florida Memory website",
+        "Integrated Google Translate JavaScript API for multi-language support",
+        "Implemented Web Speech API for text-to-speech synthesis",
+        "Created customizable options for content presentation control",
+        "Built suite of accessibility tools using jQuery and Bootstrap",
+        "Potential open-source release to benefit wider community",
       ],
     },
   },
   {
-    id: "inscript-hindi-typing",
-    companyName: "Inscript Hindi Typing",
-    type: "Personal",
-    category: ["Web Dev", "UI/UX"],
+    id: "photo-transfer-tool",
+    companyName: "Photo Order Transfer Tool",
+    type: "Professional",
+    category: ["Backend"],
     shortDescription:
-      "Developed a user-friendly website for Inscript Hindi typing, addressing the need for a simple tool for Hindi writers to convey data digitally.",
-    websiteLink: "https://hindityping.namanbarkiya.xyz",
-    githubLink: "https://github.com/namanbarkiya/inscript-hindi-keyboard",
-    techStack: ["HTML 5", "CSS 3", "Javascript"],
-    startDate: new Date("2022-05-01"),
-    endDate: new Date("2022-06-15"),
-    companyLogoImg: "/projects/hindi-keyboard/logo.png",
+      "Windows batch script designed to streamline the Florida Memory photo lab print order process",
+    githubLink: "https://github.com/admaloch-dos/photo-invoice-search-tool",
+    techStack: [
+      "Javascript",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/photo-transfer.webp",
     pagesInfoArr: [
       {
-        title: "Typing Interface",
-        description: "Minimal and user-friendly Inscript Hindi typing area",
-        imgArr: ["/projects/hindi-keyboard/web_1.png"],
-      },
-      {
-        title: "Copy and Download the file",
+        title: "Photo Transfer Automation",
         description:
-          "Export functionality allowing users to copy text or download as a document file",
-        imgArr: [
-          "/projects/hindi-keyboard/web_2.png",
-          "/projects/hindi-keyboard/web_3.png",
-        ],
+          "Automated file location and transfer tool for invoice orders",
+        imgArr: ["/projects/photo-transfer.webp"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "The 'Inscript Hindi Typing Website' project emerged from the need to provide a simple and accessible tool for Hindi writers, especially those in digital news and media, who wished to convey data in Hindi.",
-        "Recognizing the challenges posed by complex software in the market, I set out to create a minimalistic typing area that catered to the needs of a vast community of Hindi typists in India.",
-        "The project was designed to address the specific requirements of users familiar with the Inscript keyboard layout, mapping English and Hindi alphabets for seamless typing. The intuitive interface allowed users to effortlessly switch between languages, streamlining the process of content creation.",
-        "Leveraging HTML and CSS, I crafted the website's UI to ensure a user-friendly experience. Additionally, Local Storage was utilized to enable users to save and retrieve their work, enhancing convenience and productivity.",
-        "The website's focus on user experience and simplicity proved to be a key factor in its popularity among Hindi writers. By offering a tool that reduced the barriers to entry, I contributed to the digital empowerment of Hindi typists who previously faced challenges in conveying their message effectively.",
-        "This project marked one of my initial forays into web development and highlighted the transformative potential of technology in addressing real-world challenges.",
+        "This tool automates the process of locating and copying files for invoice orders, significantly reducing the time and effort required by staff. It ensures accurate record-keeping and allows staff to focus on other tasks while the tool handles file retrieval and copying.",
+        "It pushes out copied files in a specified location and generates list of files not found and detailed logs for tracking purposes.",
       ],
       bullets: [
-        "Developed a user-friendly website for Inscript Hindi typing.",
-        "Catered to the needs of Hindi writers in digital news and media.",
-        "Created a minimalistic and intuitive typing interface for the Inscript keyboard layout.",
-        "Mapped English and Hindi alphabets to provide a seamless typing experience.",
-        "Utilized HTML and CSS to design a user-friendly UI.",
-        "Implemented Local Storage to enable users to save and retrieve their work.",
-        "Contributed to the digital empowerment of Hindi typists by offering a simple tool.",
-        "Marked one of my first web development projects, showcasing technology's potential for addressing real-world needs.",
+        "Automated file location and copying for invoice orders",
+        "Significantly reduced staff time and effort requirements",
+        "Ensured accurate record-keeping throughout process",
+        "Generated detailed logs and missing file reports",
+        "Streamlined Florida Memory photo lab print order workflow",
+      ],
+    },
+  },
+  {
+    id: "movie-brain",
+    companyName: "Movie Brain",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev"],
+    shortDescription:
+      "Custom movie search app built with MERN and OMDb API",
+    websiteLink: "https://movie-brain.netlify.app/",
+    githubLink: "https://github.com/admaloch/react-movie-search",
+    techStack: [
+      "Typescript",
+      "React",
+      "MongoDB",
+      "express.js",
+      "Node.js",
+      "Redux",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/react-movies.webp",
+    pagesInfoArr: [
+      {
+        title: "Movie Search",
+        description:
+          "Custom movie search app with user accounts, liked lists, reviews, and social features",
+        imgArr: ["/projects/react-movies.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Custom movie search app complete with backend built with MERN stack and OMDb API for movie data. This is a long term project that is a rebuild of an older project, and has been used as a means to learn and apply new concepts.",
+        "Users can setup accounts, search movies, create liked lists, write reviews and see what others are watching.",
+      ],
+      bullets: [
+        "Built full-stack application using TypeScript, React, MongoDB, Express, and Node.js",
+        "Integrated RTK Query and Redux for state management",
+        "Implemented user authentication and account management",
+        "Created social features including liked lists and movie reviews",
+        "Utilized OMDb API for comprehensive movie data",
+      ],
+    },
+  },
+    {
+    id: "wgu-cloud-planner",
+    companyName: "WGU Cloud Planner",
+    type: "Personal",
+    category: ["Mobile Dev", "Full Stack"],
+    shortDescription:
+      "Academic planning mobile application with real-time cloud sync, built with .NET MAUI and Firebase",
+    websiteLink: "https://wgucloudplanner.netlify.app/",
+    githubLink: "https://github.com/admaloch/dotnet_maui_capstone",
+    techStack: [
+      "Firebase",
+      "Google Cloud",
+    ],
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2025-01-01"),
+    companyLogoImg: "/projects/wgu-cloud-planner.webp",
+    pagesInfoArr: [
+      {
+        title: "Mobile Application",
+        description:
+          "Cross-platform mobile app with course management, assessment tracking, and PDF report generation",
+        imgArr: ["/projects/wgu-cloud-planner.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "The WGU Cloud Planner is a full-stack mobile application designed to streamline academic planning and course management for students. Built with modern cloud-native architecture using .NET MAUI, it provides real-time synchronization across devices with robust data management capabilities.",
+        "Built with .NET 9 and MAUI framework, the application implements MVVM architecture with CommunityToolkit.Mvvm for clean separation of concerns. The backend leverages Google Cloud Platform with Firebase Firestore for NoSQL database operations and real-time sync, along with Firebase Authentication for secure user management.",
+        "The project demonstrates comprehensive software engineering practices including multi-project solution architecture, dependency injection, repository pattern implementation, xUnit testing framework, and GitLab CI/CD pipelines. It features course and term management, assessment tracking with validation, PDF report generation, and cross-platform deployment for Android.",
+      ],
+      bullets: [
+        "Developed full-stack mobile application using .NET MAUI with MVVM architecture and XAML",
+        "Implemented real-time cloud synchronization using Firebase Firestore on Google Cloud Platform",
+        "Built secure authentication system with Firebase Auth and user-based data isolation",
+        "Created PDF report generation feature for shareable progress reports and course plans",
+        "Designed multi-project solution with clean separation using Core, MAUI, and Test projects",
+        "Implemented comprehensive unit testing with xUnit framework and automated CI/CD pipelines",
+        "Applied repository pattern for abstracted data access with dependency injection",
+        "Deployed Android application with APK generation and web showcase on Netlify",
+        "Included complete project documentation with UML diagrams, wireframes, and architecture specs",
+      ],
+    },
+  },
+  {
+    id: "react-blackjack",
+    companyName: "Blackjack Game",
+    type: "Personal",
+    category: ["Full Stack", "Web Dev"],
+    shortDescription:
+      "Blackjack game built with MERN. Real time interactions, animations, multiplayer, database management",
+    websiteLink: "https://blackjack-react.netlify.app/",
+    githubLink: "https://github.com/admaloch/react-blackjack",
+    techStack: [
+      "React",
+      "MongoDB",
+      "express.js",
+      "Node.js",
+      "Redux",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/react-blackjack.webp",
+    pagesInfoArr: [
+      {
+        title: "Blackjack Game",
+        description:
+          "Interactive blackjack game with real-time gameplay and session storage",
+        imgArr: ["/projects/react-blackjack.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "The backend is set up to store game sessions, allowing users to return to a previous game. The intent of this project was to work with more complex logic, state management, and solidify my proficiency in React component structuring, hooks, and to develop a deeper understanding of the component lifecycle and React re-rendering process.",
+      ],
+      bullets: [
+        "Developed full-stack blackjack game with MERN stack",
+        "Implemented RTK Query and Redux for complex state management",
+        "Built real-time multiplayer functionality with animations",
+        "Created session persistence to allow users to resume games",
+        "Focused on React component lifecycle and re-rendering optimization",
+      ],
+    },
+  },
+  {
+    id: "node-blackjack",
+    companyName: "Blackjack CLI",
+    type: "Personal",
+    category: ["Backend"],
+    shortDescription:
+      "A custom command line black jack game built with Node.Js and TypeScript",
+    githubLink: "https://github.com/admaloch/blackjack-node-app",
+    techStack: [
+      "Node.js",
+      "Typescript",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/node-blackjack.webp",
+    pagesInfoArr: [
+      {
+        title: "Command Line Blackjack",
+        description:
+          "Terminal-based blackjack game with multiple players and realistic gameplay",
+        imgArr: ["/projects/node-blackjack.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This is a command-line blackjack game built in TypeScript and Node.js. The primary aim was to enhance my grasp of core JavaScript fundamentals and delve into more intricate logic. Additionally, it provided an opportunity to immerse myself in the Node ecosystem and refine my TypeScript skills.",
+        "The game faithfully mirrors a real Blackjack game with multiple decks of cards, allowing multiple players and adhering to standard rules and procedures—minus the inclusion of card suits.",
+      ],
+      bullets: [
+        "Built command-line interface blackjack game with TypeScript and Node.js",
+        "Implemented complex game logic with multiple decks and players",
+        "Followed standard blackjack rules and procedures",
+        "Enhanced understanding of JavaScript fundamentals and async operations",
+        "Developed proficiency in the Node.js ecosystem",
+      ],
+    },
+  },
+  {
+    id: "js-movie-search",
+    companyName: "Javascript Movie Search",
+    type: "Personal",
+    category: ["Frontend", "Web Dev"],
+    shortDescription:
+      "Movie search app built using OMDB API",
+    websiteLink: "https://admaloch.github.io/js-movie-search/",
+    githubLink: "https://github.com/admaloch/js-movie-search",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/movie-js.webp",
+    pagesInfoArr: [
+      {
+        title: "Movie Search Interface",
+        description:
+          "Vanilla JavaScript movie search application with OMDB API integration",
+        imgArr: ["/projects/movie-js.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This is a movie search app built with vanilla JS that enables users to search for movies, TV shows, or both. The movie data is sourced from the OMDB API.",
+        "This project allowed me to gain hands on experience working with asynchronous JavaScript and APIs in addition to deepening my understanding of related concepts such as working with promises, the call stack, and the browser's role in handling asynchronous operations.",
+      ],
+      bullets: [
+        "Built movie search application using vanilla JavaScript",
+        "Integrated OMDB API for movie and TV show data",
+        "Gained hands-on experience with asynchronous JavaScript",
+        "Deepened understanding of promises and the call stack",
+        "Learned browser's role in handling async operations",
+      ],
+    },
+  },
+  {
+    id: "qr-generator",
+    companyName: "Image Based QR Code Generator",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Image Based QR Code Generator",
+    websiteLink: "https://image-qr-generator.netlify.app/",
+    githubLink: "https://github.com/admaloch-dos/qr-img-cropper-generator",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/qr-generator.webp",
+    pagesInfoArr: [
+      {
+        title: "QR Code Generator",
+        description:
+          "User-friendly platform for generating, editing, and downloading image-based QR codes",
+        imgArr: ["/projects/qr-generator.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "At Florida Memory, we wanted the capability to embed QR codes directly into our photos for various marketing, pamphlets, calendars, etc.. During our search, we discovered an open-source solution called QART.js, which enables the generation of basic image-based codes.",
+        "Inspired by its potential, we proceeded to enhance and develop it into a more user-friendly platform that simplifies the process of generating, editing, and downloading codes on the fly.",
+      ],
+      bullets: [
+        "Enhanced open-source QART.js library for production use",
+        "Created user-friendly interface for QR code generation",
+        "Implemented image cropping and editing capabilities",
+        "Built download functionality for quick export",
+        "Used for marketing materials, pamphlets, and calendars at Florida Memory",
+      ],
+    },
+  },
+  {
+    id: "cataloguing-tool",
+    companyName: "Cataloguing Tool",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "A web-based tool designed to streamline and standardize the cataloguing process for libraries and archives.",
+    websiteLink: "https://cataloguing-names.netlify.app/",
+    githubLink: "https://github.com/admaloch-dos/cataloguing-tool",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/cataloguing.webp",
+    pagesInfoArr: [
+      {
+        title: "Cataloguing Interface",
+        description:
+          "Data entry tool with standardized formatting for names, places, and subjects",
+        imgArr: ["/projects/cataloguing.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Developing a cataloguing tool for the Florida Department of State to streamline and standardize data entry. This tool ensures consistent formatting of names, places, and subjects, reducing errors and improving data accuracy.",
+        "It simplifies the approval workflow and automates record insertion into the database, enhancing overall efficiency. This was the final project during my time there and did not get finished.",
+      ],
+      bullets: [
+        "Developed cataloguing tool for Florida Department of State",
+        "Ensured consistent formatting of names, places, and subjects",
+        "Reduced data entry errors and improved accuracy",
+        "Simplified approval workflow processes",
+        "Automated record insertion into database system",
+      ],
+    },
+  },
+  {
+    id: "florida-county-tool",
+    companyName: "Florida County Research Tool",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "A page I designed, featuring a Florida county research tool for the Florida Memory website.",
+    websiteLink: "https://florida-memory-research-tool.netlify.app/",
+    githubLink: "https://github.com/admaloch-dos/florida-county-timeline-tool",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/countytimeline.webp",
+    pagesInfoArr: [
+      {
+        title: "County Research Tool",
+        description:
+          "Interactive tool combining maps and database information for historical research",
+        imgArr: ["/projects/countytimeline.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This interactive tool simplifies the process for people to research the history of Florida counties. It combines our collection of maps and county database information, making it easier for patrons and archive staff to access and explore historical data efficiently.",
+      ],
+      bullets: [
+        "Designed interactive research tool for Florida Memory website",
+        "Combined historical maps with county database information",
+        "Simplified historical research process for patrons",
+        "Enhanced access to archival data for staff and public",
+        "Improved efficiency in exploring Florida county history",
+      ],
+    },
+  },
+  {
+    id: "folk-festival-slider",
+    companyName: "Florida Folk Festival Image Display",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Image slider with dynamic QR code generation",
+    websiteLink: "https://folk-slider.netlify.app/",
+    githubLink: "https://github.com/admaloch-dos/folk-fest-img-display",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+      "Bootstrap",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/img-slider.webp",
+    pagesInfoArr: [
+      {
+        title: "Image Slider",
+        description:
+          "Custom Bootstrap slider with database integration and QR code generation",
+        imgArr: ["/projects/img-slider.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "The goal was to have a slider that could be linked to data from the database and include custom features. To achieve this, a Bootstrap slider was used as the base, and additional functionalities were added.",
+        "These include image-based QR codes that link to item pages on the website, an audio player, and customizable settings for the slider.",
+      ],
+      bullets: [
+        "Built custom image slider using Bootstrap as foundation",
+        "Integrated with database for dynamic content loading",
+        "Implemented image-based QR codes linking to website pages",
+        "Added audio player functionality for multimedia content",
+        "Created customizable settings for slider configuration",
+      ],
+    },
+  },
+  {
+    id: "black-history-guide",
+    companyName: "Florida Memory Black History Research Guide",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Web-based version of a research guide on black history resources in our collection",
+    websiteLink: "https://www.floridamemory.com/learn/research-tools/guides/black-history-collections/",
+    techStack: [
+      "Javascript",
+      "HTML 5",
+      "CSS 3",
+    ],
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2024-01-01"),
+    companyLogoImg: "/projects/blackhistorycollections.webp",
+    pagesInfoArr: [
+      {
+        title: "Research Guide",
+        description:
+          "Comprehensive digital guide to Black history resources in Florida Memory collection",
+        imgArr: ["/projects/blackhistorycollections.webp"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Web-based version of a research guide on black history resources in our collection. This guide helps researchers and the public discover and access important Black history materials preserved by Florida Memory.",
+      ],
+      bullets: [
+        "Created web-based research guide for Florida Memory",
+        "Showcased Black history resources in state collection",
+        "Improved public access to historical materials",
+        "Enhanced discoverability of archival resources",
+        "Supported educational and research initiatives",
       ],
     },
   },

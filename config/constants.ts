@@ -60,6 +60,13 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
+  | "jQuery"
+  | "Batch Scripting"
+  | "PowerShell"
+  | "Project Management"
+  | "GitHub"
+  | "Documentation"
+  | "Community Building"
   | "Framer Motion";
 
 export type ValidCategory =

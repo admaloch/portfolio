@@ -9,7 +9,7 @@ import ChipContainer from "@/components/ui/chip-container";
 import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 
 interface ProjectPageProps {
@@ -18,7 +18,7 @@ interface ProjectPageProps {
   }>;
 }
 
-const githubUsername = "namanbarkiya";
+const githubUsername = "admaloch";
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
@@ -40,12 +40,6 @@ export default async function Project({ params }: ProjectPageProps) {
         All Projects
       </Link>
       <div>
-        <time
-          dateTime={Date.now().toString()}
-          className="block text-sm text-muted-foreground"
-        >
-          {formatDateFromObj(project.startDate)}
-        </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
           <div className="flex items-center">
@@ -57,7 +51,7 @@ export default async function Project({ params }: ProjectPageProps) {
               </CustomTooltip>
             )}
             {project.websiteLink && (
-              <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
+              <CustomTooltip text="Link to live demo of the project">
                 <Link href={project.websiteLink} target="_blank">
                   <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
                 </Link>
@@ -80,7 +74,7 @@ export default async function Project({ params }: ProjectPageProps) {
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
+              <p className="font-medium">{"Davis Maloch"}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>
@@ -89,15 +83,6 @@ export default async function Project({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      <Image
-        src={project.companyLogoImg}
-        alt={project.companyName}
-        width={720}
-        height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
-        priority
-      />
-
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Tech Stack
@@ -105,42 +90,39 @@ export default async function Project({ params }: ProjectPageProps) {
         <ChipContainer textArr={project.techStack} />
       </div>
 
-      <div className="mb-7 ">
+      <div className="mb-7">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Description
         </h2>
-        {/* {<project.descriptionComponent />} */}
-        <ProjectDescription
-          paragraphs={project.descriptionDetails.paragraphs}
-          bullets={project.descriptionDetails.bullets}
-        />
-      </div>
-
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
-        </h2>
-        {project.pagesInfoArr.map((page, ind) => (
-          <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
-            </h3>
-            <div>
-              <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+        <div className="relative">
+          {/* Image - hidden on mobile, floats top right on tablet and up */}
+          {project.pagesInfoArr[0]?.imgArr[0] && (
+            <Image
+              src={project.pagesInfoArr[0].imgArr[0]}
+              alt={project.pagesInfoArr[0].title}
+              width={300}
+              height={300}
+              className="hidden md:block md:float-right md:ml-4 md:mb-4 w md:w-[350px] rounded-xl border-4 border-foreground bg-muted transition-colors shadow-sm"
+              priority
+            />
+          )}
+          {/* {<project.descriptionComponent />} */}
+          <ProjectDescription
+            paragraphs={project.descriptionDetails.paragraphs}
+            bullets={project.descriptionDetails.bullets}
+          />
+          {/* Image at bottom on mobile only */}
+          {project.pagesInfoArr[0]?.imgArr[0] && (
+            <Image
+              src={project.pagesInfoArr[0].imgArr[0]}
+              alt={project.pagesInfoArr[0].title}
+              width={720}
+              height={405}
+              className="md:hidden my-4 rounded-xl border-4 border-foreground bg-muted transition-colors shadow-sm mx-auto max-w-[300px]"
+              priority
+            />
+          )}
+        </div>
       </div>
 
       <hr className="mt-12" />

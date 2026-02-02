@@ -57,20 +57,6 @@ export const metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
-    creator: `@${siteConfig.username}`,
-  },
   icons: {
     icon: siteConfig.iconIco,
     shortcut: siteConfig.logoIcon,

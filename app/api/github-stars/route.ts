@@ -10,7 +10,7 @@ function getTemplateRepoSlug(): string {
     return url.pathname.replace(/^\/+/, "");
   } catch {
     // Fallback (should never happen unless config is invalid)
-    return "namanbarkiya/minimal-next-portfolio";
+    return "admaloch/portfolio";
   }
 }
 
@@ -25,7 +25,9 @@ async function getGitHubRepoStars(repo: string): Promise<number | null> {
 
     if (!res.ok) return null;
     const data = (await res.json()) as { stargazers_count?: number };
-    return typeof data.stargazers_count === "number" ? data.stargazers_count : null;
+    return typeof data.stargazers_count === "number"
+      ? data.stargazers_count
+      : null;
   } catch {
     return null;
   }

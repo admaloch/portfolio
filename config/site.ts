@@ -1,13 +1,12 @@
 export const siteConfig = {
-  name: "Naman Barkiya - Applied AI Engineer",
-  authorName: "Naman Barkiya",
-  username: "namanbarkiya",
+  name: "Davis Maloch",
+  authorName: "Davis Maloch",
+  username: "admaloch",
   description:
-    "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems. Explore my projects, experience, and contributions in software development and AI.",
-  url: "https://nbarkiya.xyz",
+    "Davis Maloch - Full Stack Developer showcasing projects, experience, and contributions in software development.",
+  url: "https://davismaloch.com",
   links: {
-    twitter: "https://x.com/namanbarkiya",
-    github: "https://github.com/namanbarkiya",
+    github: "https://github.com/admaloch",
     templateRepo: "https://github.com/namanbarkiya/minimal-next-portfolio",
   },
   ogImage:
@@ -17,20 +16,13 @@ export const siteConfig = {
   logoIcon:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
   keywords: [
-    "Naman Barkiya",
-    "Applied AI Engineer",
-    "AI Engineer",
+    "Davis Maloch",
     "Software Engineer",
     "Full Stack Developer",
-    "Machine Learning",
-    "Data Engineering",
-    "UBS",
     "Python Developer",
     "React Developer",
     "Next.js Developer",
     "TypeScript",
-    "Databricks",
-    "AI Startups",
     "Software Development",
     "Web Developer",
     "Backend Developer",

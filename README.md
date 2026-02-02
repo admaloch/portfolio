@@ -21,7 +21,7 @@ A modern, responsive, and SEO-optimized **Next.js 16 portfolio template** design
 
 ## 🚀 Demo
 
-View the live demo at [https://nbarkiya.xyz/](https://nbarkiya.xyz)
+View the live demo at [https://davismaloch.com/](https://davismaloch.com)
 
 https://github.com/namanbarkiya/minimal-next-portfolio/assets/82203888/f93bf5ca-c2bd-4fe5-a413-1050ebf6cf78
 
@@ -131,7 +131,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgements
 
 - Design inspired by modern portfolio best practices
-- Built by [Naman Barkiya](https://github.com/namanbarkiya)
+- Template by [Naman Barkiya](https://github.com/namanbarkiya)
+- Customized by [Davis Maloch](https://github.com/admaloch)
 - Icons from [Lucide](https://lucide.dev/)
 
 ## 💻 Deploy on Vercel
