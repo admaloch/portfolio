@@ -18,58 +18,58 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      description: "Davis Maloch's portfolio website.",
     },
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description: "Languages, frameworks and practices.",
     metadata: {
       title: "Skills",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Davis Maloch's key skills that define his professional identity.",
     },
   },
   projects: {
     title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    description: "Projects and technical achievements.",
     metadata: {
       title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
+      description: "Davis Maloch's projects in building web applications.",
     },
   },
   contact: {
     title: "Contact",
-    description: "Let's connect and explore collaborations.",
+    description: "Let's connect!",
     metadata: {
       title: "Contact",
-      description: "Contact Naman Barkiya.",
+      description: "Contact Davis Maloch.",
     },
   },
-  contributions: {
-    title: "Contributions",
-    description: "Open-source contributions and community involvement.",
-    metadata: {
-      title: "Contributions",
-      description:
-        "Naman Barkiya's open-source contributions and community involvement.",
-    },
-  },
+
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Davis Maloch's resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Davis Maloch's resume.",
     },
   },
   experience: {
     title: "Experience",
-    description: "Professional journey and career timeline.",
+    description: "Professional Experience",
     metadata: {
       title: "Experience",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Davis Maloch's professional journey and experience timeline.",
+    },
+  },
+  education: {
+    title: "Education",
+    description: "Degrees, courses and certifications.",
+    metadata: {
+      title: "Education",
+      description: "Davis Maloch's education, degrees, and certifications.",
     },
   },
 };

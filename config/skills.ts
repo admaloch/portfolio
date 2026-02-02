@@ -37,7 +37,7 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.nestjs,
   },
   {
-    name: "express.js",
+    name: "Express.js",
     description:
       "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
     rating: 5,

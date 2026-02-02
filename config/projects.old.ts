@@ -382,7 +382,7 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "Developed a feature-rich mobile shopping application with admin panel, user authentication, and seamless product management using React Native and Firebase.",
     githubLink: "https://github.com/namanbarkiya/apex-shopping-app",
-    techStack: ["React Native", "Javascript", "Redux", "Node.js", "express.js"],
+    techStack: ["React Native", "Javascript", "Redux", "Node.js", "Express.js"],
     startDate: new Date("2021-07-14"),
     endDate: new Date("2022-07-01"),
     companyLogoImg: "/projects/apex/logo.png",

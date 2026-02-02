@@ -32,13 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contributions`,
+      url: `${baseUrl}/education`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/skills`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
