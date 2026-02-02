@@ -17,7 +17,7 @@ import { experiences } from "@/config/experience";
 import { pagesConfig } from "@/config/pages";
 import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { featuredSkills } from "@/config/skills";
+import { featuredSkills, skills } from "@/config/skills";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 
@@ -282,8 +282,13 @@ export default function IndexPage() {
             {pagesConfig.skills.description}
           </AnimatedText>
         </div>
-        <SkillsCard skills={featuredSkills} />
-        <AnimatedText delay={0.4} className="flex justify-center">
+        <div className="block md:hidden">
+          <SkillsCard skills={featuredSkills} />
+        </div>
+        <div className="hidden md:block">
+          <SkillsCard skills={skills} />
+        </div>
+        <AnimatedText delay={0.4} className="flex justify-center md:hidden">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
               <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
