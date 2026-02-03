@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
@@ -23,20 +22,6 @@ const norican = Norican({
   display: "swap",
 });
 
-// Animation variants for the navigation items
-const navItemVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.1 * i,
-      duration: 0.5,
-      ease: "easeOut" as const,
-    },
-  }),
-};
-
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
@@ -56,15 +41,7 @@ export function MainNav({ items, children }: MainNavProps) {
       {items?.length ? (
         <nav className="hidden gap-6 md:flex items-center">
           {items?.map((item, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={navItemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <div key={index}>
               <Link
                 href={item.disabled ? "#" : item.href}
                 className={cn(
@@ -77,19 +54,17 @@ export function MainNav({ items, children }: MainNavProps) {
               >
                 {item.title}
               </Link>
-            </motion.div>
+            </div>
           ))}
         </nav>
       ) : null}
-      <motion.button
+      <button
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.menu />}
         <span className="font-bold">Menu</span>
-      </motion.button>
+      </button>
       {showMobileMenu && items && (
         <MobileNav items={items}>{children}</MobileNav>
       )}
