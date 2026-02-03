@@ -1,12 +1,10 @@
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-
-import { AnimatedSection } from "@/components/common/animated-section";
 import { Icons } from "@/components/common/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { education } from "@/config/education";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 interface EducationDetailPageProps {
   params: Promise<{
@@ -77,94 +75,82 @@ export default async function EducationDetailPage({
       </div>
 
       <div className="space-y-8">
-
         {edu.skills.length > 0 && (
-          <AnimatedSection direction="up" delay={0.5}>
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Skills Developed</h2>
-              <div className="flex flex-wrap gap-2">
-                {edu.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="inline-flex items-center px-3 py-1 rounded-lg text-sm font-medium bg-primary/10 text-primary border border-primary/20"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-        )}
-
-        <AnimatedSection direction="up" delay={0.3}>
           <div>
-            <h2 className="text-2xl font-bold mb-4">Description</h2>
-            <div className="space-y-4">
-              {edu.description.map((para, idx) => (
-                <p key={idx} className="text-muted-foreground leading-relaxed">
-                  {para}
-                </p>
+            <h2 className="text-2xl font-bold mb-4">Skills Developed</h2>
+            <div className="flex flex-wrap gap-2">
+              {edu.skills.map((skill, idx) => (
+                <span
+                  key={idx}
+                  className="inline-flex items-center px-3 py-1 rounded-lg text-sm font-medium bg-primary/10 text-primary border border-primary/20"
+                >
+                  {skill}
+                </span>
               ))}
             </div>
           </div>
-        </AnimatedSection>
-
-        {edu.achievements.length > 0 && (
-          <AnimatedSection direction="up" delay={0.4}>
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Achievements</h2>
-              <ul className="space-y-3">
-                {edu.achievements.map((achievement, idx) => (
-                  <li
-                    key={idx}
-                    className="text-base leading-relaxed flex items-start gap-3"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimatedSection>
         )}
 
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Description</h2>
+          <div className="space-y-4">
+            {edu.description.map((para, idx) => (
+              <p key={idx} className="text-muted-foreground leading-relaxed">
+                {para}
+              </p>
+            ))}
+          </div>
+        </div>
 
-                {edu.focus && edu.focus.length > 0 && (
-          <AnimatedSection direction="up" delay={0.1}>
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Focus Areas</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {edu.focus.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 p-3 rounded-lg bg-muted"
-                  >
-                    <Icons.check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
+        {edu.achievements.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Achievements</h2>
+            <ul className="space-y-3">
+              {edu.achievements.map((achievement, idx) => (
+                <li
+                  key={idx}
+                  className="text-base leading-relaxed flex items-start gap-3"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  {achievement}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {edu.focus && edu.focus.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Focus Areas</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {edu.focus.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 p-3 rounded-lg bg-muted"
+                >
+                  <Icons.check className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
-          </AnimatedSection>
+          </div>
         )}
 
         {edu.curriculum && edu.curriculum.length > 0 && (
-          <AnimatedSection direction="up" delay={0.2}>
-            <div>
-              <h2 className="text-2xl font-bold mb-4">Curriculum</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {edu.curriculum.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 p-3 rounded-lg bg-muted"
-                  >
-                    <Icons.check className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Curriculum</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {edu.curriculum.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 p-3 rounded-lg bg-muted"
+                >
+                  <Icons.check className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
             </div>
-          </AnimatedSection>
+          </div>
         )}
       </div>
 

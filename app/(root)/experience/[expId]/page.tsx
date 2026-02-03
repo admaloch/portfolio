@@ -1,9 +1,3 @@
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { redirect } from "next/navigation";
-
-import { AnimatedSection } from "@/components/common/animated-section";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
@@ -12,6 +6,10 @@ import ChipContainer from "@/components/ui/chip-container";
 import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
 import { experiences } from "@/config/experience";
 import { siteConfig } from "@/config/site";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
 interface ExperienceDetailPageProps {
   params: Promise<{
@@ -71,66 +69,60 @@ export default async function ExperienceDetailPage({
       value: "summary",
       label: "Summary",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Role Summary
-            </h3>
-            <ul className="space-y-3">
-              {experience.description.map((desc, idx) => (
-                <li
-                  key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Role Summary
+          </h3>
+          <ul className="space-y-3">
+            {experience.description.map((desc, idx) => (
+              <li
+                key={idx}
+                className="text-base leading-relaxed flex items-start gap-3"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                {desc}
+              </li>
+            ))}
+          </ul>
+        </div>
       ),
     },
     {
       value: "achievements",
       label: "Achievements",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Key Achievements
-            </h3>
-            <ul className="space-y-3">
-              {experience.achievements.map((achievement, idx) => (
-                <li
-                  key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {achievement}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Key Achievements
+          </h3>
+          <ul className="space-y-3">
+            {experience.achievements.map((achievement, idx) => (
+              <li
+                key={idx}
+                className="text-base leading-relaxed flex items-start gap-3"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                {achievement}
+              </li>
+            ))}
+          </ul>
+        </div>
       ),
     },
     {
       value: "skills",
       label: "Skills",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Technologies & Skills
-            </h3>
-            <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-sm text-muted-foreground">
-              These are the primary technologies and skills utilized during my
-              time at {experience.company}.
-            </p>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Technologies & Skills
+          </h3>
+          <ChipContainer textArr={experience.skills} />
+          <p className="mt-4 text-sm text-muted-foreground">
+            These are the primary technologies and skills utilized during my
+            time at {experience.company}.
+          </p>
+        </div>
       ),
     },
   ];
@@ -138,16 +130,16 @@ export default async function ExperienceDetailPage({
   return (
     <ClientPageWrapper>
       <div className="container max-w-4xl mx-auto py-8 px-4">
-        <AnimatedSection className="mb-6">
+        <div className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
             <Link href="/experience">
               <Icons.chevronLeft className="mr-2 h-4 w-4" />
               Back to Experience
             </Link>
           </Button>
-        </AnimatedSection>
+        </div>
 
-        <AnimatedSection delay={0.2}>
+        <div>
           <Card className="overflow-hidden rounded-lg border bg-background p-2 transition-all duration-300">
             <CardHeader className="pb-6">
               <div className="flex flex-col gap-4">
@@ -204,16 +196,16 @@ export default async function ExperienceDetailPage({
               <ResponsiveTabs items={tabItems} defaultValue="summary" />
             </CardContent>
           </Card>
-        </AnimatedSection>
+        </div>
 
-        <AnimatedSection delay={0.4} className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8">
           <Button variant="outline" asChild>
             <Link href="/experience">
               <Icons.chevronLeft className="mr-2 h-4 w-4" />
               View All Experience
             </Link>
           </Button>
-        </AnimatedSection>
+        </div>
       </div>
     </ClientPageWrapper>
   );
