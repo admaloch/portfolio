@@ -124,7 +124,10 @@ export default function IndexPage() {
           <Icons.chevronDown className="h-6 w-6 mt-10" />
         </div>
       </section>
-      <section className="container space-y-6 bg-muted py-10 my-14" id="projects">
+      <section
+        className="container space-y-6 bg-muted py-10 my-14"
+        id="projects"
+      >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             {pagesConfig.projects.title}
@@ -174,7 +177,10 @@ export default function IndexPage() {
           </Link>
         </div>
       </section>
-      <section className="container space-y-6 bg-muted py-10 my-14" id="education">
+      <section
+        className="container space-y-6 bg-muted py-10 my-14"
+        id="education"
+      >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             {pagesConfig.education.title}
