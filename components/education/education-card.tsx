@@ -77,7 +77,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => {
           </p>
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 flex justify-end mt-auto">
+      <div className="mt-3 sm:mt-4 flex justify-end">
         <Button
           variant="outline"
           size="sm"

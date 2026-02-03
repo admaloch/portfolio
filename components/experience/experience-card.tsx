@@ -91,7 +91,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           </div>
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 flex justify-end mt-auto">
+      <div className="mt-3 sm:mt-4 flex justify-end ">
         <Button
           variant="outline"
           size="sm"

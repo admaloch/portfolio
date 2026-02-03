@@ -116,9 +116,9 @@ export default async function Project({ params }: ProjectPageProps) {
             <Image
               src={project.pagesInfoArr[0].imgArr[0]}
               alt={project.pagesInfoArr[0].title}
-              width={720}
-              height={405}
-              className="md:hidden my-4 rounded-xl border-4 border-foreground bg-muted transition-colors shadow-sm mx-auto max-w-[300px]"
+              width={250}
+              height={250}
+              className="md:hidden my-4 rounded-xl border-4 border-foreground bg-muted transition-colors shadow-sm mx-auto max-w-[250px]"
               priority
             />
           )}

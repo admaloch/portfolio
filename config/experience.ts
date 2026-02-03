@@ -56,8 +56,8 @@ export const experiences: ExperienceInterface[] = [
     position: "Web Developer / Systems Analyst",
     company: "Florida Memory",
     location: "Tallahassee, Florida",
-    startDate: new Date("2022-12-01"),
-    endDate: new Date("2024-12-01"),
+    startDate: new Date("2023-01-01"),
+    endDate: new Date("2025-01-01"),
     description: [
       "Modernized a high-traffic public web application serving thousands of users, shipping features and improvements in a collaborative, cross-functional team.",
       "Took ownership of diagnosing and resolving complex, full-stack production issues, reducing critical bug resolution time by ~30%.",

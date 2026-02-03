@@ -64,7 +64,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                     <h3 className="text-lg sm:text-xl font-bold text-foreground">
                       {experience.position}
                     </h3>
-                    <span className="inline-flex items-center text-center mx-auto px-3 py-1 rounded-xl text-xs sm:text-sm font-medium bg-primary/10 text-primary border border-primary/20 w-fit">
+                    <span className="inline-flex items-center text-center  px-3 py-1 rounded-xl text-xs sm:text-sm font-medium bg-primary/10 text-primary border border-primary/20 w-fit">
                       {getDurationText(
                         experience.startDate,
                         experience.endDate
