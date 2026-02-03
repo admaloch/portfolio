@@ -1,6 +1,5 @@
 "use client";
 
-import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
@@ -15,13 +14,6 @@ interface MainNavProps {
   children?: React.ReactNode;
 }
 
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
@@ -34,9 +26,7 @@ export function MainNav({ items, children }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <span className={cn(norican.className, "text-2xl")}>
-          {siteConfig.authorName}
-        </span>
+        <span className="text-2xl font-bold">{siteConfig.authorName}</span>
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex items-center">
