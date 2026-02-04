@@ -27,53 +27,51 @@ export default async function Project({ params }: ProjectPageProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
-      <Link
-        href="/projects"
-        className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
-        )}
-      >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
-        All Projects
-      </Link>
       <div>
-        <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
+        <h1 className="flex items-center text-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">
-                <Link href={project.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
+                <Link
+                  href={project.githubLink}
+                  target="_blank"
+                  className="p-2 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group"
+                >
+                  <Icons.gitHub className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                 </Link>
               </CustomTooltip>
             )}
             {project.websiteLink && (
               <CustomTooltip text="Link to live demo of the project">
-                <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
+                <Link
+                  href={project.websiteLink}
+                  target="_blank"
+                  className="p-2 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group"
+                >
+                  <Icons.externalLink className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                 </Link>
               </CustomTooltip>
             )}
           </div>
         </h1>
         <ChipContainer textArr={project.category} />
-        <div className="mt-4 flex space-x-4">
+        <div className="my-4 flex space-x-4">
           <Link
             href={siteConfig.links.github}
-            className="flex items-center space-x-2 text-sm"
+            className="flex items-center space-x-3 "
           >
             <Image
               src={profileImg}
               alt={"Davis Maloch"}
-              width={42}
-              height={42}
+              width={48}
+              height={48}
               className="rounded-full bg-background"
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Davis Maloch"}</p>
-              <p className="text-[12px] text-muted-foreground">
+              <p className="font-medium text-base">{"Davis Maloch"}</p>
+              <p className="text-sm text-muted-foreground">
                 @{siteConfig.username}
               </p>
             </div>

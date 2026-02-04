@@ -40,7 +40,7 @@ export const pagesConfig: PagesConfig = {
   },
   contact: {
     title: "Contact",
-    description: "Let's connect!",
+    description: "Send me a message and I will get back to you as soon as possible.",
     metadata: {
       title: "Contact",
       description: "Contact Davis Maloch.",

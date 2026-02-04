@@ -130,15 +130,6 @@ export default async function ExperienceDetailPage({
   return (
     <ClientPageWrapper>
       <div className="container max-w-4xl mx-auto py-8 px-4">
-        <div className="mb-6">
-          <Button variant="ghost" size="sm" className="mb-4" asChild>
-            <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
-              Back to Experience
-            </Link>
-          </Button>
-        </div>
-
         <div>
           <Card className="overflow-hidden rounded-lg border bg-background p-2 transition-all duration-300">
             <CardHeader className="pb-6">
@@ -169,9 +160,9 @@ export default async function ExperienceDetailPage({
                             href={experience.companyUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            className="p-1.5 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group inline-flex"
                           >
-                            <Icons.externalLink className="w-4 h-4" />
+                            <Icons.externalLink className="w-3.5 h-3.5 text-primary group-hover:text-primary-foreground transition-colors" />
                           </a>
                         )}
                       </div>

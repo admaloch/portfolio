@@ -63,10 +63,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                     {experience.position}
                   </h3>
                   <span className="inline-flex items-center px-3 py-1 rounded-xl text-xs sm:text-sm font-medium bg-primary/10 text-primary border border-primary/20 w-fit">
-                    {getDurationText(
-                      experience.startDate,
-                      experience.endDate
-                    )}
+                    {getDurationText(experience.startDate, experience.endDate)}
                   </span>
                 </div>
 
@@ -79,9 +76,9 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                       href={experience.companyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      className="p-1.5 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group inline-flex"
                     >
-                      <Icons.externalLink className="w-4 h-4" />
+                      <Icons.externalLink className="w-3.5 h-3.5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </a>
                   )}
                 </div>

@@ -114,7 +114,8 @@ export default function IndexPage() {
                 buttonVariants({
                   variant: "outline",
                   size: "lg",
-                })
+                }),
+                "border-2"
               )}
               aria-label="Contact Davis Maloch"
             >

@@ -16,7 +16,7 @@ export default function ContactPage() {
       description={pagesConfig.contact.description}
     >
       <div className="flex justify-center">
-        <div className="w-full max-w-2xl rounded-xl border bg-background border-4 p-6 shadow-sm sm:p-8">
+        <div className="w-full max-w-2xl rounded-xl border bg-background border-2 p-6 shadow-sm sm:p-8">
           <ContactForm />
         </div>
       </div>

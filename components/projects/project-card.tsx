@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +15,28 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="relative p-6 w-full bg-background border border-border rounded-lg h-full flex flex-col">
+      <div className="absolute top-4 right-4 flex gap-2 z-10">
+        {project.githubLink && (
+          <Link
+            href={project.githubLink}
+            target="_blank"
+            className="p-2 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Icons.gitHub className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
+          </Link>
+        )}
+        {project.websiteLink && (
+          <Link
+            href={project.websiteLink}
+            target="_blank"
+            className="p-2 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Icons.externalLink className="w-4 h-4 text-primary group-hover:text-primary-foreground transition-colors" />
+          </Link>
+        )}
+      </div>
       <div className="relative w-full h-[200px] flex-shrink-0">
         <Image
           className="rounded-lg border border-border object-cover"

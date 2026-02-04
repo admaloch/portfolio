@@ -31,7 +31,18 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div className="group relative flex h-full flex-col overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
-      <div className="flex items-start gap-3 sm:gap-4">
+      {experience.companyUrl && (
+        <a
+          href={experience.companyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-4 right-4 p-2 rounded-full bg-background border-2 border-primary hover:bg-primary hover:border-primary transition-colors group/icon z-10"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Icons.externalLink className="w-4 h-4 text-primary group-hover/icon:text-primary-foreground transition-colors" />
+        </a>
+      )}
+      <div className="flex items-start gap-3 sm:gap-4 pt-8">
         {experience.logo && (
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
             <Image
@@ -49,20 +60,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               <h3 className="text-base sm:text-lg font-bold text-foreground line-clamp-2 sm:line-clamp-1">
                 {experience.position}
               </h3>
-              {experience.companyUrl && (
-                <a
-                  href={experience.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors flex-shrink-0 mt-0.5 sm:mt-0"
-                >
-                  <Icons.externalLink className="w-4 h-4" />
-                </a>
-              )}
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-muted-foreground">
+            <div className="flex flex-col gap-1 text-sm text-muted-foreground">
               <span className="font-medium">{experience.company}</span>
-              <span className="hidden sm:inline">•</span>
               <span>{experience.location}</span>
             </div>
             <div className="flex items-center gap-2">
